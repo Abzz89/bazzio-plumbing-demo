@@ -800,3 +800,21 @@ body {
 .bazzio-footer { width: 100%; box-sizing: border-box; text-align: center; padding: 24px 16px; margin-top: 32px; color: #64748b; font-size: 12px; line-height: 1.8; border-top: 1px solid #e2e8f0; }
 .bazzio-footer strong { color: #1e3a5f; font-weight: 700; }
 .bazzio-footer span { margin: 0 8px; color: #94a3b8; }
+
+/* How It Works header button */
+#how-it-works-btn { padding: 9px 16px; border: 1px solid #60a5fa; border-radius: 8px; background: #2563eb; color: #fff; font-size: 13px; font-weight: 700; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+#how-it-works-btn:hover { background: #1d4ed8; transform: translateY(-1px); }
+#how-it-works-btn:focus-visible { outline: 3px solid #93c5fd; outline-offset: 2px; }
+@media (max-width: 480px) { #how-it-works-btn { padding: 7px 10px; font-size: 12px; } }
+
+/* Bazzio walkthrough polish */
+#how-it-works-overlay .lead-detail-panel { width: min(600px, 92vw); box-sizing: border-box; padding: 32px; }
+#how-it-works-overlay h2 { font-size: 25px; margin-bottom: 12px; }
+#how-it-works-overlay .lead-detail-panel > p { font-size: 14px; line-height: 1.7; }
+#how-it-works-overlay .walkthrough-steps { display: grid; gap: 12px; margin: 24px 0; }
+#how-it-works-overlay .walkthrough-steps p { margin: 0; padding: 16px 18px; border: 1px solid #e2e8f0; border-left: 4px solid #2563eb; border-radius: 10px; background: #f8fafc; color: #475569; font-size: 14px; line-height: 1.6; }
+#how-it-works-overlay .walkthrough-steps strong { color: #172b4d; }
+#walkthrough-close { width: 100%; padding: 13px 18px; margin-top: 14px; border: 0; border-radius: 9px; background: #2563eb; color: white; font-size: 14px; font-weight: 700; cursor: pointer; }
+#walkthrough-close:hover { background: #1d4ed8; }
+#walkthrough-close:focus-visible { outline: 3px solid #93c5fd; outline-offset: 2px; }
+@media (max-width: 480px) { #how-it-works-overlay .lead-detail-panel { padding: 20px; } #how-it-works-overlay h2 { font-size: 21px; } }

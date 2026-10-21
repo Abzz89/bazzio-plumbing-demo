@@ -827,3 +827,6 @@ document.addEventListener('click', function(event) {
 
 
 
+
+// Bazzio walkthrough
+document.getElementById("how-it-works-btn")?.addEventListener("click",function(){if(document.getElementById("how-it-works-overlay"))return;const o=document.createElement("div");o.id="how-it-works-overlay";o.className="lead-detail-overlay";o.innerHTML=`<section class="lead-detail-panel" role="dialog" aria-modal="true" aria-labelledby="walkthrough-title" style="max-width:600px;max-height:85vh;overflow-y:auto"><h2 id="walkthrough-title">How Missed-Call Recovery Works</h2><p>See how Bazzio Systems could help capture missed opportunities.</p><div class="walkthrough-steps"><p><strong>1. Missed Call</strong> - A customer calls while the plumber is busy.</p><p><strong>2. Automatic SMS</strong> - A connected system could immediately text the customer.</p><p><strong>3. Lead Captured</strong> - The opportunity appears in the dashboard.</p><p><strong>4. Follow-Up</strong> - The team tracks the lead toward booking.</p></div><p><small>Simulated demonstration only. No real calls or messages are sent.</small></p><button type="button" id="walkthrough-close">Close Walkthrough</button></section>`;document.body.appendChild(o);const close=()=>o.remove();o.querySelector("#walkthrough-close").addEventListener("click",close);o.addEventListener("click",e=>{if(e.target===o)close()})});
