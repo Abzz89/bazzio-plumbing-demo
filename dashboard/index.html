@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peak Flow Plumbing | Lead Recovery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-icon">P</div>
+      <div class="brand-text">
+        <div class="brand-name">Peak Flow Plumbing</div>
+        <div class="brand-sub">Missed Call Recovery</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="demo-badge">INTERACTIVE DEMO</span><button id="reset-demo-btn" type="button" title="Restore the original six demo customers">Reset Demo</button>
+      <span id="anchor-label" class="anchor-label"></span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="metrics-section">
+    <div class="metrics-grid">
+      <article class="metric-card">
+        <h3>Open Leads</h3>
+        <strong id="metric-open">0</strong>
+      </article>
+
+      <article class="metric-card">
+        <h3>Average Response Time</h3>
+        <strong id="metric-avg-hrs">0</strong>
+        <span id="metric-avg-label"></span>
+      </article>
+
+      <article class="metric-card">
+        <h3>Jobs Booked</h3>
+        <strong id="metric-booked">0</strong>
+      </article>
+    </div>
+  </section>
+
+  <section class="metrics-section followup-summary">
+    <div class="metrics-grid">
+      <article class="metric-card">
+        <h3>Overdue Follow-Ups</h3>
+        <strong id="followup-overdue">0</strong>
+      </article>
+      <article class="metric-card">
+        <h3>Due Today</h3>
+        <strong id="followup-today">0</strong>
+      </article>
+      <article class="metric-card">
+        <h3>Upcoming Follow-Ups</h3>
+        <strong id="followup-upcoming">0</strong>
+      </article>
+    </div>
+  </section>
+  <div id="board"></div>
+
+  <section id="followup-priority-section"
+    style="max-width:1230px;margin:24px auto;padding:24px;box-sizing:border-box;background:#ffffff;border:1px solid #e2e8f0;border-radius:14px;box-shadow:0 6px 20px rgba(15,23,42,0.04);">
+
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px;">
+      <div>
+        <h2 style="margin:0;color:#172b4d;font-size:20px;">
+          Today's Follow-Up Priorities
+        </h2>
+        <p style="margin:6px 0 0;color:#64748b;font-size:13px;">
+          Customers organized by callback urgency
+        </p>
+      </div>
+      <span id="priority-count"
+        style="background:#eff6ff;color:#1d4ed8;padding:7px 12px;border-radius:20px;font-size:13px;font-weight:600;">
+        0 scheduled
+      </span>
+    </div>
+
+    <div id="followup-priority-list">
+      <p style="color:#64748b;font-size:14px;">
+        Loading follow-up priorities...
+      </p>
+    </div>
+  </section>
+  <section class="board">
+    <div class="board-inner">
+    <div id="followup-filter-toolbar" style="grid-column:1 / -1;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px;">
+      <span id="active-filter-label" aria-live="polite" style="font-weight:600;color:#334155;">Showing all leads</span>
+      <button id="show-all-leads" type="button" style="padding:10px 18px;border:1px solid #cbd5e1;border-radius:8px;background:#ffffff;color:#172b4d;font-weight:600;cursor:pointer;">
+        Show All Leads
+      </button>
+    </div>
+
+      <article class="lane">
+        <div class="lane-header">
+          <h2>Needs Attention</h2>
+          <span id="count-attention">0</span>
+        </div>
+        <div id="lane-attention-cards"></div>
+      </article>
+
+      <article class="lane">
+        <div class="lane-header">
+          <h2>In Progress</h2>
+          <span id="count-progress">0</span>
+        </div>
+        <div id="lane-progress-cards"></div>
+      </article>
+
+      <article class="lane">
+        <div class="lane-header">
+          <h2>Closed</h2>
+          <span id="count-closed">0</span>
+        </div>
+        <div id="lane-closed-cards"></div>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+<script src="../app/core.js"></script>
+<script src="app.js"></script>
+<footer class="bazzio-footer">Interactive demonstration by <strong>Bazzio Systems</strong> <span>·</span> AI Automation for Small Businesses</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
